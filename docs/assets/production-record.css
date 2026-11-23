@@ -1,0 +1,82 @@
+.record-hero {
+  color: #fff;
+  background:
+    linear-gradient(90deg, #211630 12%, #2a1b3cf5 42%, #2919368c 74%, #21163057),
+    url("workspace.webp") right center / auto 100% no-repeat,
+    #211630;
+}
+
+.record-wrap { width: min(calc(100% - 48px), 1100px); margin-inline: auto; }
+.record-hero .record-wrap { padding-block: clamp(54px, 9vw, 110px); }
+.record-hero h1 {
+  margin-top: 16px;
+  color: var(--lime);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -.045em;
+  line-height: 1.12;
+}
+.record-hero .lede { max-width: 38em; margin-top: 19px; font-size: 1.05rem; line-height: 1.85; }
+.record-hero .hero-actions { margin-top: 25px; }
+.record-hero :focus-visible { outline-color: var(--lime); }
+.record-readme { background: var(--paper); border-bottom: 1px solid #dfd5ee; }
+.record-readme .record-wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: 24px 54px; padding-block: 38px; }
+.record-readme h2, .record-content h2 { font-size: clamp(1.5rem, 3.4vw, 2.15rem); line-height: 1.25; }
+.record-readme p, .record-content p { margin-top: 10px; line-height: 1.8; }
+.record-jump ul { display: grid; gap: 8px; margin: 10px 0 0; padding: 0; list-style: none; }
+.record-jump a { display: block; padding: 9px 14px; border: 1px solid #cbbddd; border-radius: 5px; background: #fff; font-weight: 800; text-decoration: none; }
+.record-jump a:hover { border-color: #694988; background: #fdfaff; }
+
+.record-content { padding-block: 42px 64px; }
+.record-content > section + section { margin-top: 62px; }
+.record-content section { scroll-margin-top: 18px; }
+.record-phase { margin-top: 25px; }
+.record-phase-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px 16px;
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 5px;
+  background: #2d2140;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.record-phase-title small { color: var(--lime); font-size: .875rem; font-weight: 700; }
+.record-phase > summary, .record-original > summary { cursor: pointer; }
+.record-phase > summary.record-phase-title { display: list-item; }
+.record-phase > summary small { margin-inline-start: 10px; }
+.record-entry { margin-top: 10px; padding: clamp(14px, 3vw, 23px); border: 1px solid #e2d8ed; border-radius: 7px; scroll-margin-top: 18px; }
+.record-entry:target { border-color: #7955a7; box-shadow: 0 0 0 2px #7955a73b; }
+.record-entry h4 { margin: 0; font-size: 1.15rem; line-height: 1.5; overflow-wrap: anywhere; }
+.record-entry .record-note { color: var(--muted); font-size: .875rem; }
+.record-original { margin-top: 12px; }
+.record-original > summary { width: fit-content; color: #4f2f72; font-weight: 800; line-height: 1.5; }
+.record-original > summary:hover { text-decoration: underline; text-underline-offset: .22em; }
+.record-original pre {
+  max-height: 32rem;
+  margin: 12px 0 8px;
+  padding: clamp(12px, 2vw, 20px);
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border: 1px solid #dfd2ed;
+  border-radius: 5px;
+  background: #f8f5ff;
+  color: var(--ink);
+  font: 1rem/1.75 var(--japanese);
+  font-variant-ligatures: none;
+}
+.record-permalink { color: #4f2f72; font-size: .875rem; text-underline-offset: .2em; }
+.record-toplink { display: inline-block; margin-top: 24px; font-weight: 800; text-underline-offset: .25em; }
+
+@media (max-width: 700px) {
+  .record-wrap { width: calc(100% - 36px); }
+  .record-hero { background: linear-gradient(90deg, #211630f5 0%, #221732d9 55%, #211630aa), url("workspace.webp") center / cover; }
+  .record-readme .record-wrap { grid-template-columns: 1fr; padding-block: 27px; }
+  .record-content { padding-block: 33px 46px; }
+  .record-content > section + section { margin-top: 44px; }
+}

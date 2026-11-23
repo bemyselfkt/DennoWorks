@@ -109,6 +109,8 @@ button, select { font: inherit; }
 .story h2, .diagrams h2 { font-size: clamp(1.5rem, 3vw, 2.23rem); font-weight: 800; line-height: 1.25; }
 .story-copy p { margin-top: 15px; font-size: 1rem; line-height: 1.9; }
 .story-copy .credit { margin-top: 17px; font-size: .875rem; color: var(--muted); }
+.story-record { display: inline-block; margin-top: 15px; font-weight: 800; text-underline-offset: .3em; }
+.story-record:hover { color: #5a337d; }
 .diagrams { padding-block: 61px 70px; }
 .diagrams ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 0; margin: 22px 0 0; list-style: none; }
 .diagrams a { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 3px 12px; min-height: 59px; padding: 17px 15px; border: 1px solid #e1d8ee; border-radius: 7px; font-weight: 700; text-decoration: none; }
