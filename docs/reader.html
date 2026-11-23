@@ -18,26 +18,39 @@
         DENNO<span>WORKS</span>
       </a>
       <h1>Episode 0</h1>
-      <div class="mode-picker" role="group" aria-label="読み方">
-        <button type="button" id="single-mode" aria-pressed="true">ページ送り</button>
-        <button type="button" id="vertical-mode" aria-pressed="false">縦スクロール</button>
+      <div class="reader-tools">
+        <div class="mode-picker" role="group" aria-label="読み方">
+          <button type="button" id="vertical-mode" aria-pressed="true">縦スクロール</button>
+          <button type="button" id="single-mode" aria-pressed="false">ページ送り</button>
+        </div>
+        <button class="fullscreen-button" type="button" id="fullscreen-button" title="全画面（Fキー）" aria-label="全画面" aria-pressed="false">
+          <span class="fullscreen-icon" aria-hidden="true"></span>
+          <span id="fullscreen-label">全画面</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main class="reading-area" id="reading-area" aria-label="マンガ本編">
-    <div id="comic" class="comic" dir="ltr"></div>
+  <main class="reading-area" id="reading-area" aria-label="マンガ本編" tabindex="0">
+    <div id="comic" class="comic vertical" dir="ltr"></div>
     <noscript><p class="reader-message">閲覧画面にはJavaScriptを使います。<a href="assets/pages/p01.webp">1ページ目の画像を開く</a></p></noscript>
   </main>
 
-  <nav class="reader-dock" id="reader-dock" aria-label="ページ移動" hidden>
+  <nav class="reader-dock" id="reader-dock" aria-label="閲覧操作" hidden>
     <div class="reader-dock-inner">
-      <button class="page-button next-page" type="button" id="next-page">次へ</button>
-      <label class="page-select-label" for="page-select"><span class="visually-hidden">表示するページ</span>
-        <select id="page-select"></select>
-        <span class="select-chevron" aria-hidden="true"></span>
-      </label>
-      <button class="page-button prev-page" type="button" id="prev-page">前へ</button>
+      <div class="page-nav">
+        <button class="page-button next-page" type="button" id="next-page">次へ</button>
+        <label class="page-select-label" for="page-select"><span class="visually-hidden">表示するページ</span>
+          <select id="page-select"></select>
+          <span class="select-chevron" aria-hidden="true"></span>
+        </label>
+        <button class="page-button prev-page" type="button" id="prev-page">前へ</button>
+      </div>
+      <div class="zoom-controls" id="zoom-controls" role="group" aria-label="画像の拡大・縮小" hidden>
+        <button type="button" id="zoom-out" aria-label="縮小" title="縮小（−キー）">−</button>
+        <button type="button" id="zoom-reset" aria-label="ページ全体を表示" title="ページ全体を表示（0キー）">100%</button>
+        <button type="button" id="zoom-in" aria-label="拡大" title="拡大（＋キー）">＋</button>
+      </div>
     </div>
   </nav>
   <span id="reader-announcement" class="visually-hidden" role="status"></span>
