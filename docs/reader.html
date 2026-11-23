@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#181324">
+  <title>Episode 0 | こちら、電脳ワークス！</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/pages.js" defer></script>
+  <script src="assets/reader.js" defer></script>
+</head>
+<body class="reader">
+  <header class="reader-header">
+    <div class="reader-header-inner">
+      <a class="brand" href="./" aria-label="作品トップへ戻る">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        DENNO<span>WORKS</span>
+      </a>
+      <h1>Episode 0</h1>
+      <div class="mode-picker" role="group" aria-label="読み方">
+        <button type="button" id="single-mode" aria-pressed="true">ページ送り</button>
+        <button type="button" id="vertical-mode" aria-pressed="false">縦スクロール</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="reading-area" id="reading-area" aria-label="マンガ本編">
+    <div id="comic" class="comic" dir="ltr"></div>
+    <noscript><p class="reader-message">閲覧画面にはJavaScriptを使います。<a href="assets/pages/p01.webp">1ページ目の画像を開く</a></p></noscript>
+  </main>
+
+  <nav class="reader-dock" id="reader-dock" aria-label="ページ移動" hidden>
+    <div class="reader-dock-inner">
+      <button class="page-button next-page" type="button" id="next-page">次へ</button>
+      <label class="page-select-label" for="page-select"><span class="visually-hidden">表示するページ</span>
+        <select id="page-select"></select>
+        <span class="select-chevron" aria-hidden="true"></span>
+      </label>
+      <button class="page-button prev-page" type="button" id="prev-page">前へ</button>
+    </div>
+  </nav>
+  <span id="reader-announcement" class="visually-hidden" role="status"></span>
+</body>
+</html>
